@@ -1,0 +1,500 @@
+<!DOCTYPE html> 
+<html> 
+<head> <title>Pitivi</title> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<link rel="stylesheet" type="text/css" href="index.css" /> 
+<script type="text/javascript" 
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
+></script> 
+<style type="text/css"> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead"><a 
+href="http://www.pitivi.org" >Pitivi</a></h2>
+ <div class="author" ><span 
+class="ecrm-1200">Vicente Gonz</span><span 
+class="ecrm-1200">á</span><span 
+class="ecrm-1200">lez Ruiz</span></div><br />
+<div class="date" ><span 
+class="ecrm-1200">May 30, 2018</span></div>
+                                                                  
+
+                                                                  
+   </div>
+                                                                  
+
+                                                                  
+   <h2 class="likechapterHead"><a 
+ id="x1-1000"></a>Contents</h2> <div class="tableofcontents">
+   <span class="chapterToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Introduction</a></span>
+<br />    <span class="sectionToc" >1.1 <a 
+href="#x1-30001.1" id="QQ2-1-3">About Pitivi</a></span>
+<br />    <span class="sectionToc" >1.2 <a 
+href="#x1-40001.2" id="QQ2-1-4">Install</a></span>
+<br />     <span class="subsectionToc" >1.2.1 <a 
+href="#x1-50001.2.1" id="QQ2-1-5">Debian</a></span>
+<br />    <span class="sectionToc" >1.3 <a 
+href="#x1-60001.3" id="QQ2-1-6">Supported audio/image/video formats</a></span>
+<br />    <span class="sectionToc" >1.4 <a 
+href="#x1-70001.4" id="QQ2-1-7">The main window</a></span>
+<br />   <span class="chapterToc" >2 <a 
+href="#x1-80002" id="QQ2-1-8">Importing media</a></span>
+<br />   <span class="chapterToc" >3 <a 
+href="#x1-90003" id="QQ2-1-9">Controlling the timeline</a></span>
+<br />   <span class="chapterToc" >4 <a 
+href="#x1-100004" id="QQ2-1-10">Presets</a></span>
+<br />   <span class="chapterToc" >5 <a 
+href="#x1-110005" id="QQ2-1-11">Trimming (cut and paste)</a></span>
+<br />    <span class="sectionToc" >5.1 <a 
+href="#x1-120005.1" id="QQ2-1-12">Basic trimming</a></span>
+<br />    <span class="sectionToc" >5.2 <a 
+href="#x1-130005.2" id="QQ2-1-13">Ripple editing</a></span>
+<br />    <span class="sectionToc" >5.3 <a 
+href="#x1-140005.3" id="QQ2-1-14">Roll editing</a></span>
+<br />   <span class="chapterToc" >6 <a 
+href="#x1-150006" id="QQ2-1-15">Keyframe curves</a></span>
+<br />   <span class="chapterToc" >7 <a 
+href="#x1-160007" id="QQ2-1-16">Splitting</a></span>
+<br />    <span class="sectionToc" >7.1 <a 
+href="#x1-170007.1" id="QQ2-1-17">Split the current clip</a></span>
+<br />    <span class="sectionToc" >7.2 <a 
+href="#x1-180007.2" id="QQ2-1-18">Split all clips at the same time</a></span>
+<br />    <span class="sectionToc" >7.3 <a 
+href="#x1-190007.3" id="QQ2-1-19">Split multiple clips</a></span>
+<br />   <span class="chapterToc" >8 <a 
+href="#x1-200008" id="QQ2-1-20">Transitions</a></span>
+<br />    <span class="sectionToc" >8.1 <a 
+href="#x1-210008.1" id="QQ2-1-21">Fade-in/out</a></span>
+<br />    <span class="sectionToc" >8.2 <a 
+href="#x1-220008.2" id="QQ2-1-22">Crossfading (not implemented)</a></span>
+<br />   <span class="chapterToc" >9 <a 
+href="#x1-230009" id="QQ2-1-23">Eﬀects</a></span>
+<br />    <span class="sectionToc" >9.1 <a 
+href="#x1-240009.1" id="QQ2-1-24">Adding (applying) eﬀects</a></span>
+<br />    <span class="sectionToc" >9.2 <a 
+href="#x1-250009.2" id="QQ2-1-25">Removing eﬀects</a></span>
+<br />    <span class="sectionToc" >9.3 <a 
+href="#x1-260009.3" id="QQ2-1-26">Toggling eﬀects</a></span>
+   </div>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 1</span><br /><a 
+ id="x1-20001"></a>Introduction</h2>
+   <h3 class="sectionHead"><span class="titlemark">1.1   </span> <a 
+ id="x1-30001.1"></a>About Pitivi</h3>
+     <ul class="itemize1">
+     <li class="itemize">Pitivi is a free and open source video editor based on the <a 
+href="http://gstreamer.freedesktop.org" >GStreamer
+     Multimedia Framework</a>.
+     </li>
+     <li class="itemize">It is distributed under <a 
+href="http://www.gnu.org/copyleft/lesser.html" >LGPL</a>.
+     </li>
+     <li class="itemize">Runs on Linux, BSD, <a 
+href="http://wiki.pitivi.org/wiki/PiTiVi_on_Windows" >Windows</a> and <a 
+href="http://wiki.pitivi.org/wiki/Mac_OS_X" >Mac</a>.</li></ul>
+<!--l. 25--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.2   </span> <a 
+ id="x1-40001.2"></a>Install</h3>
+<!--l. 28--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.2.1   </span> <a 
+ id="x1-50001.2.1"></a>Debian</h4>
+   <!--l. 30-->
+   <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-5001r1"></a></span>sudo apt<span 
+class="cmsy-10">−</span>get install pitivi <br /><span class="label"><a 
+ id="x1-5002r2"></a></span> <br /><span class="label"><a 
+ id="x1-5003r3"></a></span># or, if the version in the repository is not fresh: <br /><span class="label"><a 
+ id="x1-5004r4"></a></span> <br /><span class="label"><a 
+ id="x1-5005r5"></a></span>wget http://pitivi.ecchi.ca/bundles/releases/pitivi<span 
+class="cmsy-10">−</span>0.94<span 
+class="cmsy-10">−</span>beta<span 
+class="cmsy-10">−</span>x86_64.tar
+   
+   </div>
+<!--l. 40--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.3   </span> <a 
+ id="x1-60001.3"></a><a 
+href="http://www.pitivi.org/manual/gstreamer.html" >Supported audio/image/video formats</a></h3>
+     <ul class="itemize1">
+     <li class="itemize">Those supported by <a 
+href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/pwg/html/section-types-definitions.html" >GStreamer</a>.</li></ul>
+                                                                  
+
+                                                                  
+<!--l. 50--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.4   </span> <a 
+ id="x1-70001.4"></a><a 
+href="http://www.pitivi.org/manual/mainwindow.html" >The main window</a></h3>
+<div class="center" 
+>
+<!--l. 53--><p class="noindent" >
+
+</p><!--l. 54--><p class="noindent" ><img 
+src="data/main-window.png" alt="PIC"  
+ /></p></div>
+<!--l. 57--><p class="noindent" >
+     </p><ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-7002x1">Header bar: Basic functions.
+     </li>
+     <li 
+  class="enumerate" id="x1-7004x2">Ruler: A time scale.
+     </li>
+     <li 
+  class="enumerate" id="x1-7006x3">Timeline: Contains the video layers.
+     </li>
+     <li 
+  class="enumerate" id="x1-7008x4">Timeline toolbar: Timeline edition.
+     </li>
+     <li 
+  class="enumerate" id="x1-7010x5">Playback toolbar: To control the playback.
+     </li>
+     <li 
+  class="enumerate" id="x1-7012x6">Previewer: To view your results.
+     </li>
+     <li 
+  class="enumerate" id="x1-7014x7">Media and eﬀect libraries.
+     </li>
+     <li 
+  class="enumerate" id="x1-7016x8">Clip conﬁguration, transitions and title editor.</li></ol>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 2</span><br /><a 
+ id="x1-80002"></a><a 
+href="http://www.pitivi.org/manual/importing.html" >Importing media</a></h2>
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-1">
+wget http://techslides.com/demos/sample-videos/small.ogv
+ <br />wget http://upload.wikimedia.org/wikipedia/commons/1/14/Xacti-AC8EX-Sample_video-001.ogg
+</div>
+<!--l. 79--><p class="nopar" >
+</p>
+     <ul class="itemize1">
+     <li class="itemize">To load a clip into Pitivi:
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-8002x1">Use the ﬁle chooser dialog (<span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">Media</span><span 
+class="ectt-1000"> Library</span><span 
+class="ectt-1000"> -&#x003E;</span><span 
+class="ectt-1000"> Import</span></span></span>) or use drag
+         and drop (from a ﬁle browser).
+         </li>
+         <li 
+  class="enumerate" id="x1-8004x2">Clik on the button “Insert the selected clips at the end of the timeline”
+         (this will concatenate the selected videos in the timeline).</li></ol>
+     </li></ul>
+     <ul class="itemize1">
+     <li class="itemize">Notice that clips can be placed/moved between layers (up and down). In
+     this case, the playback will reproduce all videos in parallel (in the same
+     canvas).</li></ul>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 3</span><br /><a 
+ id="x1-90003"></a><a 
+href="http://www.pitivi.org/manual/movearoundtimeline.html" >Controlling the timeline</a></h2>
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-9001x3">: Select a video clip with the mouse.
+     </li>
+     <li 
+  class="enumerate" id="x1-9002x3">: Use the mouse wheel anywhere over the timeline.
+     </li>
+     <li 
+  class="enumerate" id="x1-9003x3">: Hold down the Shift key while using the mousewheel.
+     </li>
+     <li 
+  class="enumerate" id="x1-9004x3">: Holding the Ctrl key while using the mousewheel over the timeline.
+     </li>
+     <li 
+  class="enumerate" id="x1-9005x3">: Click on the ruler.
+     </li>
+     <li 
+  class="enumerate" id="x1-9006x3">: Click on the ruler and move the mouse with the button still held down.</li></ol>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 4</span><br /><a 
+ id="x1-100004"></a><a 
+href="http://www.pitivi.org/manual/presets.html" >Presets</a></h2>
+<div class="center" 
+>
+<!--l. 116--><p class="noindent" >
+
+</p><!--l. 117--><p class="noindent" ><img 
+src="data/presets-capture.png" alt="PIC"  
+ /></p></div>
+     <ul class="itemize1">
+     <li class="itemize">Click on the Main menu button and select “New project”.
+     </li>
+     <li class="itemize">Allows to deﬁne the rendering (output) settings.
+     </li>
+     <li class="itemize">Notice that new presets can be created.</li></ul>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 5</span><br /><a 
+ id="x1-110005"></a><a 
+href="http://www.pitivi.org/manual/trimming.html" >Trimming (cut and paste)</a></h2>
+   <h3 class="sectionHead"><span class="titlemark">5.1   </span> <a 
+ id="x1-120005.1"></a>Basic trimming</h3>
+     <ul class="itemize1">
+     <li class="itemize">Trimming is the act of changing the length of a clip by moving its beginning
+     or end point in its timeline.
+     </li>
+     <li class="itemize">To perform a trimming do:
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-12002x1">Move the mouse cursor over the edge of a clip and a trimming handle
+         will appear.
+         </li>
+         <li 
+  class="enumerate" id="x1-12004x2">Drag the trimming handle in an appropriate direction to either reduce
+         or increase the length of the clip.</li></ol>
+     </li></ul>
+<!--l. 148--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">5.2   </span> <a 
+ id="x1-130005.2"></a>Ripple editing</h3>
+     <ul class="itemize1">
+     <li class="itemize">Ripple editing is a variant of basic trimming which, in addition to trimming
+     a clip, also moves the following clips.
+     </li>
+     <li class="itemize">To perform a ripple edition do:
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-13002x1">Place the mouse cursor on a trimming handle.
+         </li>
+         <li 
+  class="enumerate" id="x1-13004x2">Press and hold Shift.
+         </li>
+         <li 
+  class="enumerate" id="x1-13006x3">Drag the trimming handle.</li></ol>
+     </li></ul>
+                                                                  
+
+                                                                  
+<!--l. 164--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">5.3   </span> <a 
+ id="x1-140005.3"></a>Roll editing</h3>
+     <ul class="itemize1">
+     <li class="itemize">Roll  editing  is  also  a  variant  of  basic  trimming  which,  in  addition  to
+     trimming  a  clip,  trims  the  adjacent  clips  in  a  complementary  way  to
+     prevent creating gaps.
+     </li>
+     <li class="itemize">To perform a ripple edition do:
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-14002x1">Place the mouse cursor on a trimming handle between two adjacent
+         clips.
+         </li>
+         <li 
+  class="enumerate" id="x1-14004x2">Press and hold Ctrl.
+         </li>
+         <li 
+  class="enumerate" id="x1-14006x3">Drag the trimming handle.</li></ol>
+     </li></ul>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 6</span><br /><a 
+ id="x1-150006"></a><a 
+href="http://www.pitivi.org/manual/keyframecurves.html" >Keyframe curves</a></h2>
+     <ul class="itemize1">
+     <li class="itemize">A keyframe is a frame (an image) of a video that does not depend on any
+     other frame of the video when decoding.
+     </li>
+     <li class="itemize">The keyframe curve is a piecewise “curve” with vertices in the keyframes
+     and that allows to change the opacity, eﬀects, volumen, etc. of the clips
+     on both, audio a video.
+     </li>
+     <li class="itemize">By default, all clips have an hidden fully-ﬂat keyframe curve.
+     </li>
+     <li class="itemize">Most eﬀects can be controlled with keyframes curves.
+     </li>
+     <li class="itemize">Keyframe (in yellow) curves appear when clicking on a layer. A vertice
+     can be added by clicking on the keygrame curve.</li></ul>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 7</span><br /><a 
+ id="x1-160007"></a><a 
+href="http://www.pitivi.org/manual/splitting.html" >Splitting</a></h2>
+   <h3 class="sectionHead"><span class="titlemark">7.1   </span> <a 
+ id="x1-170007.1"></a>Split the current clip</h3>
+     <ul class="itemize1">
+     <li class="itemize">Divides the selected clip into two adjacent clips. Notice that if no clips are
+     selected, all the clips under the playhead will be split.
+     </li>
+     <li class="itemize">To split a single clip:
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-17002x1">Click on the clip.
+         </li>
+         <li 
+  class="enumerate" id="x1-17004x2">Reposition the playhead (if needed).
+         </li>
+         <li 
+  class="enumerate" id="x1-17006x3">Click on the Split button on the timeline toolbar or press S.</li></ol>
+     </li></ul>
+<!--l. 219--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">7.2   </span> <a 
+ id="x1-180007.2"></a>Split all clips at the same time</h3>
+     <ul class="itemize1">
+     <li class="itemize">To split all the clips across the all layers:
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-18002x1">Click on a blank area of the timeline (this will deselect all selected
+         clips, if any).
+         </li>
+         <li 
+  class="enumerate" id="x1-18004x2">Reposition the playhead (the vertical red line of the timeline), if
+         needed.
+         </li>
+         <li 
+  class="enumerate" id="x1-18006x3">Click on the Split button on the timeline toolbar or press S.</li></ol>
+     </li></ul>
+                                                                  
+
+                                                                  
+<!--l. 234--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">7.3   </span> <a 
+ id="x1-190007.3"></a>Split multiple clips</h3>
+     <ul class="itemize1">
+     <li class="itemize">To split multiple selected clips:
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-19002x1">Position the playhead where you want to split.
+         </li>
+         <li 
+  class="enumerate" id="x1-19004x2">Add or remove clips to the selection with the Ctrl modiﬁer key. This
+         will not aﬀect the playhead&#x2019;s position.
+         </li>
+         <li 
+  class="enumerate" id="x1-19006x3">Click on the Split button on the timeline toolbar or press S.</li></ol>
+     </li></ul>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 8</span><br /><a 
+ id="x1-200008"></a><a 
+href="http://www.pitivi.org/manual/transitions.html" >Transitions</a></h2>
+   <h3 class="sectionHead"><span class="titlemark">8.1   </span> <a 
+ id="x1-210008.1"></a>Fade-in/out</h3>
+     <ul class="itemize1">
+     <li class="itemize">Use the keyframe curve. You need to create for the fade-in an uphill slope
+     and viceversa.</li></ul>
+<!--l. 263--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">8.2   </span> <a 
+ id="x1-220008.2"></a>Crossfading (not implemented)</h3>
+     <ul class="itemize1">
+     <li class="itemize">To do a crossfade between two clips on the same layer, simply drag one of
+     the clips onto the other so that it overlaps. By default, a linear transition
+     will be created. A loop mode is also available.</li></ul>
+                                                                  
+
+                                                                  
+   <h2 class="chapterHead"><span class="titlemark">Chapter 9</span><br /><a 
+ id="x1-230009"></a><a 
+href="http://www.pitivi.org/manual/effects.html" >Eﬀects</a></h2>
+     <ul class="itemize1">
+     <li class="itemize">Click on <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">Effect</span><span 
+class="ectt-1000"> library</span></span></span>.
+     </li>
+     <li class="itemize">Available eﬀects depend on the software installed on your computer. If you
+     don&#x2019;t see anything (or only a handful of eﬀects) in the eﬀect library, make
+     sure that the gnome-video-eﬀects package is installed on your system.
+     Alternatively, you can look for packages containing GStreamer or frei0r
+     eﬀect plugins that are available in the repositories of your distribution.</li></ul>
+   <h3 class="sectionHead"><span class="titlemark">9.1   </span> <a 
+ id="x1-240009.1"></a><a 
+href="http://www.pitivi.org/manual/usingeffects.html" >Adding (applying) eﬀects</a></h3>
+<!--l. 293--><p class="noindent" >
+     </p><ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-24002x1">Select an existing clip on the timeline.
+     </li>
+     <li 
+  class="enumerate" id="x1-24004x2">Choose an eﬀect in the eﬀect library.
+     </li>
+     <li 
+  class="enumerate" id="x1-24006x3">Drag            the            chosen            eﬀect            into            the
+     <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">middle</span><span 
+class="ectt-1000"> pane</span><span 
+class="ectt-1000"> -&#x003E;</span><span 
+class="ectt-1000"> Clip</span><span 
+class="ectt-1000"> configuration</span><span 
+class="ectt-1000"> -&#x003E;</span><span 
+class="ectt-1000"> Effects</span></span></span>.</li></ol>
+<!--l. 302--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">9.2   </span> <a 
+ id="x1-250009.2"></a>Removing eﬀects</h3>
+<!--l. 305--><p class="noindent" >
+     </p><ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-25002x1">Select an existing clip on the timeline.
+     </li>
+     <li 
+  class="enumerate" id="x1-25004x2">Select                 the                 eﬀect                 from                 the
+     <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">middle</span><span 
+class="ectt-1000"> pane</span><span 
+class="ectt-1000"> -&#x003E;</span><span 
+class="ectt-1000"> Clip</span><span 
+class="ectt-1000"> configuration</span><span 
+class="ectt-1000"> -&#x003E;</span><span 
+class="ectt-1000"> Effects</span></span></span>.
+     </li>
+     <li 
+  class="enumerate" id="x1-25006x3">Click the Remove eﬀect button.</li></ol>
+                                                                  
+
+                                                                  
+<!--l. 314--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">9.3   </span> <a 
+ id="x1-260009.3"></a>Toggling eﬀects</h3>
+     <ul class="itemize1">
+     <li class="itemize">If you want to temporarily disable an eﬀect (to compare with and without
+     the eﬀect, or for performance reasons), click the corresponding <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">Active</span></span></span>
+     checkbox in the <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">middle</span><span 
+class="ectt-1000"> pane</span><span 
+class="ectt-1000"> -&#x003E;</span><span 
+class="ectt-1000"> Clip</span><span 
+class="ectt-1000"> configuration</span><span 
+class="ectt-1000"> -&#x003E;</span><span 
+class="ectt-1000"> Effects</span></span></span>.</li></ul>
+    
+</body> 
+</html>
+                                                                  
+
+
